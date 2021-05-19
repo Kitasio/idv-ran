@@ -69,7 +69,7 @@ export default {
                 show: false,
                 items: [
                     { name: 'О нас', link: '/about' },
-                    { name: 'Дирекция', link: '/#' },
+                    { name: 'Дирекция', link: '/management' },
                     { name: 'Подразделения', link: '/#######' },
                     { name: 'Ученый совет', link: '/##' },
                     { name: 'Документы', link: '/###' },

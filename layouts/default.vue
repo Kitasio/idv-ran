@@ -4,7 +4,7 @@
     <div class="col-span-12 md:col-span-9 lg:col-span-10">
       <div>
         <Top class="pl-5 lg:px-14 xl:px-20"></Top>
-        <Nuxt class="px-5 lg:px-14 xl:px-20 pt-10"></Nuxt>
+        <Nuxt class="px-5 lg:px-14 xl:px-20 py-10"></Nuxt>
       </div>
     </div>
   </div>
