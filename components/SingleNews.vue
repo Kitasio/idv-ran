@@ -14,16 +14,34 @@
 </template>
 
 <script>
+import { projectStorage, projectFirestore } from '../plugins/firebaseConf.js'
 export default {
     data() {
         return {
             singleNews: {
-                img: '/news1.jpg',
-                tag: 'ОНЛАЙН-КОНФЕРЕНЦИЯ',
-                title: 'Международная конференция «The Challenges for Euro-Asia: Past – Present – Future»',
-                date: '16.10.2020',
+                img: '',
+                tag: '',
+                title: '',
+                date: '',
             }
         }
+    },
+    methods: {
+        load: async function() {
+            try {
+                await projectFirestore.collection('news').onSnapshot((snap) => {
+                    let docs = snap.docs.map(doc => {
+                     return { ...doc.data(), id: doc.id }
+                    })
+                    this.singleNews = docs[0]
+                })
+            } catch(err) {
+                console.log(err)
+            }
+        }
+    },
+    mounted() {
+        this.load()
     }
 }
 </script>
