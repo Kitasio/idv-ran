@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: 'nova-light';
+    src: url('./fonts/ProximaNova-Light.woff');
+}
+@font-face {
+    font-family: 'nova';
+    src: url('./fonts/ProximaNova-Regular.woff');
+}
+@font-face {
+    font-family: 'nova-semi';
+    src: url('./fonts/ProximaNova-Semibold.woff');
+}
+@font-face {
+    font-family: 'nova-bold';
+    src: url('./fonts/ProximaNova-Bold.woff');
+}
+@font-face {
+    font-family: 'nova-extra';
+    src: url('./fonts/ProximaNova-Extrabld.woff');
+}
+@font-face {
+    font-family: 'nova-black';
+    src: url('./fonts/ProximaNova-Black.woff');
+}
+
+

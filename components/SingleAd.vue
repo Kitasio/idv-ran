@@ -1,16 +1,15 @@
 <template>
   <div>
       <div class="flex justify-between mb-3">
-          <div class="uppercase text-lg font-semibold">анонсы</div>
+          <div class="uppercase text-lg font-nova-semi">анонсы</div>
           <NuxtLink to="/ads" class="text-blue-600">все анонсы</NuxtLink>
       </div>
-      <NuxtLink v-if="singleAd.title.length" to="/">
-        <div class="font-bold mt-1" v-html="singleAd.time"></div>
-        <div class="text-blue-600 text-xs font-bold mt-2" v-html="singleAd.tag"></div>
-        <div class="font-bold mt-1 text-sm" v-html="singleAd.title"></div>
+      <NuxtLink v-if="singleAd.title.length" :to="`/ads/${singleAd.id}`">
+        <div class="font-nova-bold mt-1" v-html="singleAd.time"></div>
+        <div class="text-blue-600 text-xs font-nova-bold mt-2" v-html="singleAd.tag"></div>
+        <div class="font-nova-bold mt-1 text-sm" v-html="singleAd.title"></div>
         <div class="mt-1 text-sm" v-html="singleAd.date"></div>
       </NuxtLink>
-      <LoadingNews v-else></LoadingNews>
   </div>
 </template>
 
@@ -24,6 +23,7 @@ export default {
                 tag: '',
                 title: '',
                 date: '',
+                id: '',
             }
         }
     },

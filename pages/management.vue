@@ -2,7 +2,7 @@
   <div>
       <h1 class="text-3xl font-bold">Дирекция института</h1>
 
-      <div class="mt-5 grid lg:grid-cols-4 gap-x-5">
+      <div class="mt-5 grid lg:grid-cols-4 gap-x-10">
           <div class="col-span-3">
               <table class="table-fixed w-full">
                 <thead class="shadow-md h-14 sticky top-3 rounded-lg">
