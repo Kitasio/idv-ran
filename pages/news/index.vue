@@ -12,8 +12,8 @@
       </div>
 
       <div class="flex mt-5">
-        <div @click="prev" class="font-nova-semi text-lg cursor-pointer py-1 px-3 transition text-blue-600 hover:text-white hover:bg-blue-600 rounded">Назад</div>
-        <div @click="next" class="font-nova-semi text-lg cursor-pointer py-1 px-3 transition text-blue-600 hover:text-white hover:bg-blue-600 rounded">Далее</div>
+        <!-- <div @click="prev" class="font-nova-semi text-lg cursor-pointer py-1 px-3 transition text-blue-600 hover:text-white hover:bg-blue-600 rounded">Назад</div> -->
+        <div @click="next" class="font-nova-semi text-lg cursor-pointer text-blue-600">Далее</div>
       </div>
   </div>
 </template>

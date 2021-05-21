@@ -5,7 +5,7 @@
       <div class="mt-5 grid lg:grid-cols-4 gap-x-10">
           <div class="col-span-3">
               <table class="table-fixed w-full">
-                <thead class="shadow-md h-14 sticky top-3 rounded-lg">
+                <thead class="stag shadow-md h-14 sticky top-3 rounded-lg">
                     <tr class=" overscroll-x-auto">
                         <th class="w-1/4 text-left pl-5">Должность</th>
                         <th class="w-1/4 text-left pl-5">ФИО</th>
@@ -14,13 +14,12 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr v-for="person in people" :key="person.id" class="h-20 border-b border-black">
+                    <tr v-for="person in people" :key="person.id" class="stag h-20 border-b border-black">
                         <td class="pl-5 py-3 select-all">{{ person.position }}</td>
                         <td class="pl-5 py-3 select-all text-blue-600">{{ person.name }}</td>
                         <td class="pl-5 py-3 select-all">{{ person.phone }}</td>
                         <td class="pl-5 py-3 select-all">{{ person.email }}</td>
                     </tr>
-                    
                 </tbody>
                </table>
           </div>

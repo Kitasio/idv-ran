@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-blue-700 text-semibold text-white flex items-center  py-3">
+  <div class="bg-blue-700 font-nova-semi text-sm text-white flex items-center  py-3">
       <h1>ИНСТИТУТ ДАЛЬНЕГО ВОСТОКА РАН | ОСНОВАН В 1966 ГОДУ</h1>
   </div>
 </template>
