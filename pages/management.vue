@@ -23,20 +23,7 @@
                 </tbody>
                </table>
           </div>
-          <!-- <div class="hidden col-span-4 sm:grid-cols-2 lg:grid-cols-1 lg:col-span-3 lg:grid">
-            <div class="flex justify-between p-5 shadow-md rounded-md">
-                <div>Должность</div>
-                <div>ФИО</div>
-                <div>Телефон</div>
-                <div>E-mail</div>
-            </div>
-            <div v-for="person in people" :key="person.id" class="h-20 border-b border-black">
-                <div class="pl-5 py-3 select-all">{{ person.position }}</div>
-                <div class="pl-5 py-3 select-all text-blue-600">{{ person.name }}</div>
-                <div class="pl-5 py-3 select-all">{{ person.phone }}</div>
-                <div class="pl-5 py-3 select-all">{{ person.email }}</div>
-            </div>
-          </div> -->
+         
           <div class="col-span-4 sm:grid-cols-2 lg:col-span-3 grid gap-5 lg:hidden">
               <div v-for="person in people" :key="person.id" class="shadow-md p-3 rounded-lg">
                   <div class="flex justify-between">
