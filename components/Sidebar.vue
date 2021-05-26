@@ -10,6 +10,9 @@
               <img src="/sidebar/logo.png" alt="">
           </div>
           <div class="mt-5 ml-8 mr-3">
+              <div v-if="admin" class="my-3">
+                <NuxtLink to="/admin" class="text-md uppercase font-semibold hover:text-blue-600">Админ</NuxtLink>
+              </div>
               <div class="my-3">
                 <NuxtLink to="/" class="text-md uppercase font-semibold hover:text-blue-600">Главная</NuxtLink>
               </div>
@@ -62,9 +65,31 @@
 </template>
 
 <script>
+import { projectAuth } from '../plugins/firebaseConf'
 export default {
+    mounted() {
+        projectAuth.onAuthStateChanged(user => {
+            if (user) {
+                this.admin = user
+            } else {
+                this.admin = null
+            }
+        })
+    },
+    watch: {
+        admin: function() {
+            projectAuth.onAuthStateChanged(user => {
+                if (user) {
+                    this.admin = user
+                } else {
+                    this.admin = null
+                }
+        })
+        }
+    },
     data() {
         return {
+            admin: null,
             links1: {
                 show: false,
                 items: [
