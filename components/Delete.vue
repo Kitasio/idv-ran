@@ -1,6 +1,6 @@
 <template>
   <div v-if="admin" class="absolute opacity-0 hover:opacity-100 bg-white rounded transition text-blue-600 cursor-pointer top-2 right-2">
-      <div class="text-xs p-1" @click.alt.self="del">Удалить</div>
+      <div class="text-xs p-1" @click.alt.self="del($event)">Удалить</div>
   </div>
 </template>
 
@@ -23,8 +23,7 @@ export default {
         })
     },
     methods: {
-        del: async function() {
-            console.log(this.docId)
+        del: async function(e) {
             try {
                 await projectFirestore.collection(this.collection).doc(this.docId).delete()
                 if (this.imgName) {
@@ -33,6 +32,8 @@ export default {
                         console.log('image deleted from the storage')
                     })
                 }
+                const parent = e.target.parentElement.parentElement
+                parent.remove()
             } catch(err) {
                 console.log(err)
             }

@@ -95,8 +95,8 @@ export default {
                 items: [
                     { name: 'О нас', link: '/about' },
                     { name: 'Дирекция', link: '/management' },
-                    { name: 'Подразделения', link: '/#######' },
-                    { name: 'Ученый совет', link: '/##' },
+                    { name: 'Подразделения', link: '/units' },
+                    { name: 'Ученый совет', link: '/council' },
                     { name: 'Документы', link: '/###' },
                     { name: 'Партнеры', link: '/####' },
                     { name: 'Вакансии и конкурсы', link: '/#####' },

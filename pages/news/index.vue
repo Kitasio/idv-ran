@@ -46,12 +46,11 @@ export default {
       load: async function() {
           try {
               const first = projectFirestore.collection('news').orderBy('title').limit(8)
-              const snapshot = await first.onSnapshot(snap => {
-                let docs = snap.docs.map(doc => {
-                  return { ...doc.data(), id: doc.id }
-                })
-                this.news = docs
+              const snap = await first.get()
+              let docs = snap.docs.map(doc => {
+                return { ...doc.data(), id: doc.id }
               })
+              this.news = docs
           } catch(err) {
               console.log(err)
           }
