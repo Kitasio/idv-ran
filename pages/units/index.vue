@@ -7,10 +7,12 @@
               <div class="stag mb-5">В составе Института функционируют следующие научно-исследовательские центры:</div>
               <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                   <div class="relative w-full" v-for="unit in units" :key="unit.id">
-                    <NuxtLink :to="`/units/${unit.id}`" class="relative flex flex-col justify-between rounded-lg shadow h-48 p-3">
-                        <div class="font-nova-semi" v-html="unit.title"></div>
+                    <NuxtLink :to="`/units/${unit.id}`" class="flex h-full flex-col justify-between rounded-lg transition duration-500 shadow-brand hover:shadow-bigger p-3">
+                        <div class="flex justify-between">
+                            <div class="font-nova-semi mb-10" v-html="unit.title"></div>
+                            <img class="w-7 self-start" :src="unit.img" alt="">
+                        </div>
                         <div class="text-sm text-gray-500">{{ unit.name }}</div>
-                        <img class="absolute w-7 top-2 right-2" :src="unit.img" alt="">
                     </NuxtLink>
                     <Delete collection="units" :docId="unit.id" :imgName="unit.imgName" />
                   </div>

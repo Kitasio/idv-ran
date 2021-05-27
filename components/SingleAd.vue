@@ -30,12 +30,12 @@ export default {
     methods: {
         load: async function() {
             try {
-                await projectFirestore.collection('ads').onSnapshot((snap) => {
-                    let docs = snap.docs.map(doc => {
-                     return { ...doc.data(), id: doc.id }
-                    })
-                    this.singleAd = docs[0]
+                const res = projectFirestore.collection('ads').limit(1)
+                const snap = await res.get()
+                let docs = snap.docs.map(doc => {
+                    return { ...doc.data(), id: doc.id }
                 })
+                this.singleAd = docs[0]
             } catch(err) {
                 console.log(err)
             }

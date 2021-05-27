@@ -1,6 +1,7 @@
 <template>
   <div class="grid grid-cols-12 font-nova">
-    <div class="hidden md:grid md:col-span-3 lg:col-span-2 min-h-screen shadow-md">
+    <img @click="showSidebar = !showSidebar" class="fixed z-30 bottom-4 right-4 m-3 md:hidden w-10 cursor-pointer" src="/icons/menu.svg" alt="">
+    <div :class="{ 'fixed': showSidebar, 'hidden': !showSidebar }" class="bg-white z-30 md:static md:grid md:col-span-3 lg:col-span-2 min-h-screen shadow-big">
       <div class="">
         <Sidebar id="sidebar" class="sticky top-0 h-screen overflow-y-scroll"></Sidebar>
       </div>
@@ -13,6 +14,16 @@
     </div>
   </div>
 </template>
+
+<script>
+export default {
+  data() {
+    return {
+      showSidebar: false,
+    }
+  }
+}
+</script>
 
 <style>
 .nuxt-link-exact-active {

@@ -6,7 +6,7 @@
       <div class="mt-5 grid lg:grid-cols-4 gap-x-10">
           <div class="col-span-3 hidden lg:flex">
               <table class="table-fixed w-full max-h-16">
-                <thead class="shadow-md sticky top-3 rounded-lg">
+                <thead class="shadow-brand sticky top-3 rounded-lg">
                     <tr class=" overscroll-x-auto">
                         <th class="w-1/4 text-left pl-5 py-5">Должность</th>
                         <th class="w-1/4 text-left pl-5 py-5">ФИО</th>
