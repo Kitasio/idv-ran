@@ -59,7 +59,7 @@ export default {
   methods: {
       load: async function() {
           try {
-              const first = projectFirestore.collection('news').orderBy('title')
+              const first = projectFirestore.collection('news').orderBy('date', 'desc')
               const snap = await first.get()
               this.lastSnap = snap.docs[snap.docs.length - 1]
               let docs = snap.docs.map(doc => {
@@ -69,6 +69,18 @@ export default {
           } catch(err) {
               console.log(err)
           }
+      },
+      toUnix: function(date) {
+        try {
+          const lst = date.split('.')
+          let day = lst[0]
+          let month = lst[1]
+          let year = lst[2]
+          const unixDate = Date.parse(`${year}-${month}-${day}`)
+          return unixDate
+        } catch(err) {
+          console.log(err)
+        }
       },
       loadMore: async function() {
         try {
@@ -85,6 +97,9 @@ export default {
       },
       saveToDb: async function() {
             try {
+                if (this.doc.date) {
+                  this.doc.unixDate = this.toUnix(this.doc.date)
+                }
                 if (this.file) {
                     this.isLoading = true
                     await this.uploadImage(this.file)

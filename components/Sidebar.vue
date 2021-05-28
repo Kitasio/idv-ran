@@ -97,8 +97,8 @@ export default {
                     { name: 'Дирекция', link: '/management' },
                     { name: 'Подразделения', link: '/units' },
                     { name: 'Ученый совет', link: '/council' },
-                    { name: 'Документы', link: '/###' },
-                    { name: 'Партнеры', link: '/####' },
+                    { name: 'Документы', link: '/documents' },
+                    { name: 'Партнеры', link: '/partners' },
                     { name: 'Вакансии и конкурсы', link: '/#####' },
                 ]
             },
